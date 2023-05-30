@@ -1,15 +1,12 @@
-#ifndef _PRINTF_H
-#define _PRINTF_H
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
-#include <limits.h>
-#include <stdlib.h>
 
-#define OUTPUT_BUF_SIZE 1020
-#define BUT_FLUSH -1
-
+#define UNUSED(X)(void)(X)
+#define BUFF_SIZE 1024
 
 #define NULL_STRING "(null)"
 

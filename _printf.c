@@ -4,8 +4,8 @@ void print_buffer(char buffer[], int *buff_ind);
 
 /**
  * _printf - Printf function
- * @format: format.
- * Return: Printed chars.
+ * @format: format
+ * Return: Printed chars
  */
 int _printf(const char *format, ...)
 {
@@ -19,9 +19,9 @@ int _printf(const char *format, ...)
 
 	va_start(list, format);
 
-	for (i = 0; format && format[i]!='\0'; i++)
+	for (i = 0; format && format[i] != '\0'; i++)
 	{
-		if (format[i]!= '%')
+		if (format[i] != '%')
 		{
 			buffer[buff_ind++] = format[i];
 			if (buff_ind == BUFF_SIZE)

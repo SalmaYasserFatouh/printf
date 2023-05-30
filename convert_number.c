@@ -37,7 +37,7 @@ int print_hex(va_list ap, params_t *params)
  *
  * Return: bytes printed
  */
-int print_HEX(va_list ap, params_t *params)
+int print_HEX(va_list ap, Params_t *Params)
 {
 	unsigned long l;
 	int c = 0;
@@ -56,8 +56,8 @@ int print_HEX(va_list ap, params_t *params)
 		*--str = 'x';
 		*--str = '0';
 	}
-	params->unsign = 1;
-	return (c += print_number(str, params));
+	Params->unsign = 1;
+	return (c += print_number(str, Params));
 }
 /**
  * print_binary - prints unsigend binary number
@@ -66,15 +66,15 @@ int print_HEX(va_list ap, params_t *params)
  *
  * Return: bytes printed
  */
-int print_binary(va_list ap, params_t *params)
+int print_binary(va_list ap, Params_t *Params)
 {
 	unsigned int n = va_arg(ap, unsigned int);
 	char *str = convert(n, 2, CONVERT_UNSIGNED, params);
 	int c = 0;
 
-	if (params->heshtag_flag && n)
+	if (Params->heshtag_flag && n)
 		*--str = '0';
-	params->unsign = 1;
+	Params->unsign = 1;
 	return (c += print_number(str, params));
 }
 
@@ -85,7 +85,7 @@ int print_binary(va_list ap, params_t *params)
  *
  * Return: bytes printed
  */
-int print_octal(va_list ap, params_t *params)
+int print_octal(va_list ap, Params_t *Params)
 {
 	unsigned long int l;
 	char *str;
@@ -97,10 +97,10 @@ int print_octal(va_list ap, params_t *params)
 		l = (unsigned short int)va_arg(ap, unsigned int);
 	else
 		l = (unsigned int)va_arg(ap, unsigned int);
-	str = convert(l, 8, CONVERT_UNSIGNED, params);
+	str = convert(l, 8, CONVERT_UNSIGNED, Params);
 
 	if (params->heshtag_flag && l)
 		*--str = '0';
 	params->unsign = 1;
-	return (c += print_number(str, params));
+	return (c += print_number(str, Params));
 }

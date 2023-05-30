@@ -1,4 +1,8 @@
 #include "main.h"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5e014c81983bb6445232b4e0f5cccbf660ab9d39
 /**
  * get_size - Calculates the size to cast the argument
  * @format: Formatted string in which to print the arguments

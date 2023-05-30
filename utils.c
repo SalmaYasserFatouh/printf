@@ -1,4 +1,8 @@
 #include "main.h"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5e014c81983bb6445232b4e0f5cccbf660ab9d39
 /**
  * is_printable - Evaluates if a char is printable
  * @c: Char to be evaluated.

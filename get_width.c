@@ -1,4 +1,8 @@
 #include "main.h"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5e014c81983bb6445232b4e0f5cccbf660ab9d39
 /**
  * get_width - Calculates the width for printing
  * @format: Formatted string in which to print the arguments.
@@ -33,3 +37,7 @@ int get_width(const char *format, int *i, va_list list)
 
 	return (width);
 }
+<<<<<<< HEAD
+=======
+/*Collaborators: Salma Yasser& Aya khattab*/
+>>>>>>> 5e014c81983bb6445232b4e0f5cccbf660ab9d39

@@ -1,4 +1,8 @@
 #include "main.h"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5e014c81983bb6445232b4e0f5cccbf660ab9d39
 /************************* WRITE HANDLE *************************/
 /**
  * handle_write_char - Prints a string
@@ -249,6 +253,7 @@ int write_pointer(char buffer[], int ind, int length,
 		buffer[--ind] = extra_c;
 	return (write(1, &buffer[ind], BUFF_SIZE - ind - 1));
 }
+<<<<<<< HEAD
 
 
 ===========================================
@@ -299,3 +304,6 @@ int main(void)
     printf("Unknown:[%r]\n");
     return (0);
 }
+=======
+/*Collaborators: Salma Yasser & Aya Khattab */
+>>>>>>> 5e014c81983bb6445232b4e0f5cccbf660ab9d39
